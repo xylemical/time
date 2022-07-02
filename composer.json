@@ -1,0 +1,37 @@
+{
+    "name": "xylemical/time",
+    "type": "library",
+    "license": "MIT",
+    "description": "Provides framework for time related functionality.",
+    "keywords": [
+        "time"
+    ],
+    "homepage": "https://github.com/xylemical/time",
+    "autoload": {
+        "psr-4": {
+            "Xylemical\\Time\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xylemical\\Time\\": "tests/src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "xylemical/composer-dev-bundle": "^0.1.0"
+    },
+    "scripts": {
+        "tests": "vendor/bin/phpunit && vendor/bin/phpstan analyse && vendor/bin/phpcs",
+        "test-coverage": "php -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html report"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
