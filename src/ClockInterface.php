@@ -18,14 +18,6 @@ interface ClockInterface {
   public function getName(): string;
 
   /**
-   * Get the clock time.
-   *
-   * @return \Xylemical\Time\DateTimeInterface
-   *   The datetime.
-   */
-  public function getTime(): DateTimeInterface;
-
-  /**
    * Get the clock time as a unix timestamp.
    *
    * @return int
@@ -36,11 +28,11 @@ interface ClockInterface {
   /**
    * Set the clock time.
    *
-   * @param \Xylemical\Time\DateTimeInterface $datetime
-   *   The time.
+   * @param int $timestamp
+   *   The timestamp.
    *
    * @return $this
    */
-  public function setTime(DateTimeInterface $datetime): static;
+  public function setTimestamp(int $timestamp): static;
 
 }

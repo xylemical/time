@@ -20,7 +20,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "xylemical/parser": "dev-master"
     },
     "require-dev": {
         "xylemical/composer-dev-bundle": "^0.1.0"

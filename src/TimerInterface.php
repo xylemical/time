@@ -18,12 +18,28 @@ interface TimerInterface {
   public function getName(): string;
 
   /**
+   * Get the time passed.
+   *
+   * @return float
+   *   The time.
+   */
+  public function getTime(): float;
+
+  /**
    * Get the number of seconds passed.
    *
    * @return int
    *   The seconds.
    */
   public function getSeconds(): int;
+
+  /**
+   * Get the milliseconds.
+   *
+   * @return int
+   *   The milliseconds.
+   */
+  public function getMilliseconds(): int;
 
   /**
    * Get the microseconds.

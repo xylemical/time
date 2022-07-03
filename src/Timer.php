@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Xylemical\Time;
 
+use function intval;
 use function microtime;
 
 /**
@@ -59,6 +60,13 @@ class Timer implements TimerInterface {
   /**
    * {@inheritdoc}
    */
+  public function getTime(): float {
+    return $this->length;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function getSeconds(): int {
     return intval(floor($this->length));
   }
@@ -66,8 +74,15 @@ class Timer implements TimerInterface {
   /**
    * {@inheritdoc}
    */
+  public function getMilliseconds(): int {
+    return intval(floor(($this->length - $this->getSeconds()) * 1000));
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function getMicroseconds(): int {
-    return intval($this->length * 1000000) % 1000000;
+    return intval(floor(($this->length - $this->getSeconds()) * 1000000));
   }
 
   /**

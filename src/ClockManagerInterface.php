@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Xylemical\Time;
 
 /**
- * Provides multiple clocks based on.
+ * Provides management of clocks.
  */
 interface ClockManagerInterface {
 

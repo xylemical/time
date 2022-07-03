@@ -21,12 +21,9 @@ class ClockTest extends TestCase {
     $clock = new Clock('test');
     $this->assertEquals('test', $clock->getName());
     $this->assertTrue(time() >= $clock->getTimestamp());
-    $this->assertTrue(time() >= $clock->getTime()->getTimestamp());
 
     $timestamp = strtotime('2022-07-02 12:00:00');
-    $datetime = DateTime::createFromFormat('U', (string) $timestamp);
-    $clock->setTime($datetime);
-    $this->assertSame($datetime, $clock->getTime());
+    $clock->setTimestamp($timestamp);
     $this->assertEquals($timestamp, $clock->getTimestamp());
 
     $clock = new Clock('test', $timestamp);
